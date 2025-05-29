@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		5A0C4A692DB5EBDC000AEA91 /* Plink o hit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plink o hit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A0C4A692DB5EBDC000AEA91 /* Plink or hit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plink or hit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +40,7 @@
 		5A0C4A6A2DB5EBDC000AEA91 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A0C4A692DB5EBDC000AEA91 /* Plink o hit.app */,
+				5A0C4A692DB5EBDC000AEA91 /* Plink or hit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,7 +67,7 @@
 			packageProductDependencies = (
 			);
 			productName = PlinkOHit;
-			productReference = 5A0C4A692DB5EBDC000AEA91 /* Plink o hit.app */;
+			productReference = 5A0C4A692DB5EBDC000AEA91 /* Plink or hit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -252,7 +252,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Plink o hit";
+				INFOPLIST_KEY_CFBundleDisplayName = "Plink or hit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -265,7 +265,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = book.PlinkOHit;
-				PRODUCT_NAME = "Plink o hit";
+				PRODUCT_NAME = "Plink or hit";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -280,7 +280,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Plink o hit";
+				INFOPLIST_KEY_CFBundleDisplayName = "Plink or hit";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
@@ -293,7 +293,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = book.PlinkOHit;
-				PRODUCT_NAME = "Plink o hit";
+				PRODUCT_NAME = "Plink or hit";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
