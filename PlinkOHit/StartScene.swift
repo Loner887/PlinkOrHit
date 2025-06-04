@@ -23,9 +23,15 @@ class StartScene: SKScene {
         startButton.zPosition = 1
         addChild(startButton)
         
+        let skinsButton = SKSpriteNode(imageNamed: "skinsButtonImage")
+        skinsButton.name = "skinsButton"
+        skinsButton.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        skinsButton.zPosition = 1
+        addChild(skinsButton)
+        
         let aboutButton = SKSpriteNode(imageNamed: "settingsButtonImage")
         aboutButton.name = "settingsButton"
-        aboutButton.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        aboutButton.position = CGPoint(x: size.width / 2, y: size.height * 0.35)
         aboutButton.zPosition = 1
         addChild(aboutButton)
         
@@ -45,6 +51,10 @@ class StartScene: SKScene {
             let gameScene = GameScene(size: size)
             gameScene.scaleMode = .aspectFill
             view?.presentScene(gameScene, transition: SKTransition.fade(withDuration: 1))
+        } else if touchedNode.name == "skinsButton" {
+            let skinScene = SkinsScene(size: size)
+            skinScene.scaleMode = .aspectFill
+            view?.presentScene(skinScene, transition: SKTransition.fade(withDuration: 1))
         } else if touchedNode.name == "settingsButton" {
             goToSettings()
         } else if touchedNode.name == "privacyButton" {

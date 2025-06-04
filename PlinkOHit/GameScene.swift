@@ -2,6 +2,8 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    static var currentBackground = "gameBackgroundImage"
+
     let ballCategory: UInt32 = 0x1 << 0
     let obstacleCategory: UInt32 = 0x1 << 1
     let goalCategory: UInt32 = 0x1 << 2
@@ -49,7 +51,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setupBackground() {
-        let background = SKSpriteNode(imageNamed: "gameBackgroundImage")
+        self.childNode(withName: "background")?.removeFromParent()
+        
+        let background = SKSpriteNode(imageNamed: GameScene.currentBackground)
+        background.name = "background"
         background.position = CGPoint(x: size.width / 2, y: size.height / 2)
         background.zPosition = -2
         background.size = size
@@ -182,23 +187,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setupGoals() {
-        let rewards = [0, 10, 20, 20, 10, 0]
+        let rewards = [10, 20, 50, 20, 10]
         let slotCount = rewards.count
-        let slotWidth: CGFloat = 66
+        let slotWidth: CGFloat = 79
         let spacing = (size.width - CGFloat(slotCount) * slotWidth) / CGFloat(slotCount + 1)
         let yPosition: CGFloat = 40
         
         for (index, reward) in rewards.enumerated() {
             let imageName: String
             switch reward {
-            case 0: imageName = "goal0"
             case 10: imageName = "goal10"
             case 20: imageName = "goal20"
+            case 50: imageName = "goal50"
             default: imageName = "goal0"
             }
             
             let slot = SKSpriteNode(imageNamed: imageName)
-            slot.size = CGSize(width: slotWidth, height: 63)
+            slot.size = CGSize(width: slotWidth, height: 88)
             
             let xPosition = spacing + CGFloat(index) * (slotWidth + spacing)
             slot.position = CGPoint(x: xPosition + slotWidth / 2, y: yPosition)
@@ -347,8 +352,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func rewardForSlot(_ name: String) -> Int {
         switch name {
-        case "goal_1": return 10
-        case "goal_2", "goal_3": return 20
+        case "goal_0": return 10
+        case "goal_1": return 20
+        case "goal_2": return 50
+        case "goal_3": return 20
         case "goal_4": return 10
         default: return 0
         }
